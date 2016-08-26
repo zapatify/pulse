@@ -23,11 +23,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Divisions <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scores <span class="caret"></span></a>
           <ul class="dropdown-menu">
               <% @divisions.each do |division| %>
                 <li><%= link_to division.name, root_path(division_id: division.id) %></li>
               <% end %>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Divisions", divisions_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Teams", teams_path %></li>
           </ul>
         </li>
       </ul>
