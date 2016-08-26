@@ -2,5 +2,5 @@ Pulse
 ====================
 
 
-More to come!
+Coming soon!
 :bowtie:
