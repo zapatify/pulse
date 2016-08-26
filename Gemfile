@@ -13,6 +13,7 @@ gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'devise'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'byebug'

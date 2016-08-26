@@ -26,7 +26,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Divisions <span class="caret"></span></a>
           <ul class="dropdown-menu">
               <% @divisions.each do |division| %>
-                <li><%= link_to division.name, team_path(division_id: division.id) %></li>
+                <li><%= link_to division.name, root_path(division_id: division.id) %></li>
               <% end %>
           </ul>
         </li>
