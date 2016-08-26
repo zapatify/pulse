@@ -4,14 +4,12 @@ class ScoreboardController < ApplicationController
   end
 
   def team
-  	if params[:division_id] != nil
+    if params[:division_id] != nil
       @teams = Team.where(division_id: params[:division_id])
+      @division = Division.find(params[:division_id])
   	else
-      @teams = Team.all
+      @division = Division.first
+      @teams = Team.where(division_id: @division.id)
   	end
-
-  	@division = Division.find(params[:division_id])
-
-  	
   end
 end

@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-datatables-rails', '~> 3.3.0'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'
