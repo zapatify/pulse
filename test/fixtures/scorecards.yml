@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  athlete: MyString
+  wod1: 1
+  wod2: 1
+  wod3: 1
+  wod4: 1
+  wod5: 1
+  overall: 1
+
+two:
+  athlete: MyString
+  wod1: 1
+  wod2: 1
+  wod3: 1
+  wod4: 1
+  wod5: 1
+  overall: 1
