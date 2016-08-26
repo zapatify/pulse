@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  root 'scoreboard#main'
+
   devise_for :users
   resources :divisions
-  resources :teams
+
+  resources :teams do
+    collection {post :import}
+  end
+
   
-  root 'scoreboard#main'
+
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

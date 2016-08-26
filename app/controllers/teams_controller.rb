@@ -3,6 +3,11 @@ class TeamsController < ApplicationController
 
   # GET /teams
   # GET /teams.json
+  def import
+    Team.import(params[:file])
+    redirect_to teams_path, notice: "Teams imported"
+  end
+
   def index
     @teams = Team.all
   end
