@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_id: 1
+  division_id: 1
+  wod1_score: 1
+  wod1_place: 1
+  wod2_score: 1
+  wod2_place: 1
+  wod3_score: 1
+  wod3_place: 1
+  wod4_score: 1
+  wod4_place: 1
+  wod5_score: 1
+  wod5_place: 1
+  overall_score: 1
+  overall_place: 1
+
+two:
+  team_id: 1
+  division_id: 1
+  wod1_score: 1
+  wod1_place: 1
+  wod2_score: 1
+  wod2_place: 1
+  wod3_score: 1
+  wod3_place: 1
+  wod4_score: 1
+  wod4_place: 1
+  wod5_score: 1
+  wod5_place: 1
+  overall_score: 1
+  overall_place: 1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826191142) do
+ActiveRecord::Schema.define(version: 20160826232749) do
 
   create_table "athletes", force: :cascade do |t|
     t.string   "first_name", limit: 255
@@ -34,16 +34,23 @@ ActiveRecord::Schema.define(version: 20160826191142) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "scorecards", force: :cascade do |t|
-    t.string   "athlete",    limit: 255
-    t.integer  "wod1",       limit: 4
-    t.integer  "wod2",       limit: 4
-    t.integer  "wod3",       limit: 4
-    t.integer  "wod4",       limit: 4
-    t.integer  "wod5",       limit: 4
-    t.integer  "overall",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+  create_table "scores", force: :cascade do |t|
+    t.integer  "team_id",       limit: 4
+    t.integer  "division_id",   limit: 4
+    t.integer  "wod1_score",    limit: 4
+    t.integer  "wod1_place",    limit: 4
+    t.integer  "wod2_score",    limit: 4
+    t.integer  "wod2_place",    limit: 4
+    t.integer  "wod3_score",    limit: 4
+    t.integer  "wod3_place",    limit: 4
+    t.integer  "wod4_score",    limit: 4
+    t.integer  "wod4_place",    limit: 4
+    t.integer  "wod5_score",    limit: 4
+    t.integer  "wod5_place",    limit: 4
+    t.integer  "overall_score", limit: 4
+    t.integer  "overall_place", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "teams", force: :cascade do |t|

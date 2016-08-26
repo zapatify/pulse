@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :scores
+  get 'sample/scores'
+
   root 'scoreboard#main'
 
   devise_for :users

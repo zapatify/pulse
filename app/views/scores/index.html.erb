@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Division</th>
+      <th>Wod1 score</th>
+      <th>Wod1 place</th>
+      <th>Wod2 score</th>
+      <th>Wod2 place</th>
+      <th>Wod3 score</th>
+      <th>Wod3 place</th>
+      <th>Wod4 score</th>
+      <th>Wod4 place</th>
+      <th>Wod5 score</th>
+      <th>Wod5 place</th>
+      <th>Overall score</th>
+      <th>Overall place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.team_id %></td>
+        <td><%= score.division_id %></td>
+        <td><%= score.wod1_score %></td>
+        <td><%= score.wod1_place %></td>
+        <td><%= score.wod2_score %></td>
+        <td><%= score.wod2_place %></td>
+        <td><%= score.wod3_score %></td>
+        <td><%= score.wod3_place %></td>
+        <td><%= score.wod4_score %></td>
+        <td><%= score.wod4_place %></td>
+        <td><%= score.wod5_score %></td>
+        <td><%= score.wod5_place %></td>
+        <td><%= score.overall_score %></td>
+        <td><%= score.overall_place %></td>
+        <td><%= link_to 'Show', score %></td>
+        <td><%= link_to 'Edit', edit_score_path(score) %></td>
+        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Score', new_score_path %>

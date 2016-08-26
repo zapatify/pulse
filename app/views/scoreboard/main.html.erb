@@ -3,6 +3,7 @@
         <thead>
             <tr>
                 <th>Place</th>
+                <th>Points</th>
                 <th>Team</th>
                 <th>WOD 1</th>
                 <th>WOD 2</th>
@@ -15,6 +16,7 @@
         <tfoot>
             <tr>
                 <th>Place</th>
+                <th>Points</th>
                 <th>Team</th>
                 <th>WOD 1</th>
                 <th>WOD 2</th>
@@ -28,6 +30,7 @@
           <% @teams.each_with_index do |team, index| %>
             <tr>
                 <td><%= index+1 %></td>
+                <td><%= rand(1..100) %></td>
                 <td id="name"><%= team.team_name %></td>
                 <td id="peek" data-toggle="modal" data-target="#myModal_<%= team.id %>"><%= rand(1..100) %></td>
                 <td><%= rand(1..100) %></td>

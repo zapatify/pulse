@@ -1,0 +1,73 @@
+<%= form_for(@score) do |f| %>
+  <% if @score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% @score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_id %><br>
+    <%= f.number_field :team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :division_id %><br>
+    <%= f.number_field :division_id %>
+  </div>
+  <div class="field">
+    <%= f.label :wod1_score %><br>
+    <%= f.number_field :wod1_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wod1_place %><br>
+    <%= f.number_field :wod1_place %>
+  </div>
+  <div class="field">
+    <%= f.label :wod2_score %><br>
+    <%= f.number_field :wod2_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wod2_place %><br>
+    <%= f.number_field :wod2_place %>
+  </div>
+  <div class="field">
+    <%= f.label :wod3_score %><br>
+    <%= f.number_field :wod3_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wod3_place %><br>
+    <%= f.number_field :wod3_place %>
+  </div>
+  <div class="field">
+    <%= f.label :wod4_score %><br>
+    <%= f.number_field :wod4_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wod4_place %><br>
+    <%= f.number_field :wod4_place %>
+  </div>
+  <div class="field">
+    <%= f.label :wod5_score %><br>
+    <%= f.number_field :wod5_score %>
+  </div>
+  <div class="field">
+    <%= f.label :wod5_place %><br>
+    <%= f.number_field :wod5_place %>
+  </div>
+  <div class="field">
+    <%= f.label :overall_score %><br>
+    <%= f.number_field :overall_score %>
+  </div>
+  <div class="field">
+    <%= f.label :overall_place %><br>
+    <%= f.number_field :overall_place %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
