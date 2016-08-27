@@ -3,50 +3,48 @@
         <thead>
             <tr>
                 <th>Place</th>
-                <th>Points</th>
+                <th>Score</th>
                 <th>Team</th>
-                <th>WOD 1</th>
-                <th>WOD 2</th>
-                <th>WOD 3</th>
-                <th>WOD 4</th>
-                <th>WOD 5</th>
-                
+                <th>WOD1</th>
+                <th>WOD2</th>
+                <th>WOD3</th>
+                <th>WOD4</th>
+                <th>WOD5</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
                 <th>Place</th>
-                <th>Points</th>
+                <th>Score</th>
                 <th>Team</th>
-                <th>WOD 1</th>
-                <th>WOD 2</th>
-                <th>WOD 3</th>
-                <th>WOD 4</th>
-                <th>WOD 5</th>
-
+                <th>WOD1</th>
+                <th>WOD2</th>
+                <th>WOD3</th>
+                <th>WOD4</th>
+                <th>WOD5</th>
             </tr>
         </tfoot>
         <tbody>
-          <% @teams.each_with_index do |team, index| %>
+          <% @scores.each_with_index do |score, index| %>
             <tr>
-                <td><%= index+1 %></td>
-                <td><%= rand(1..100) %></td>
-                <td id="name"><%= team.team_name %></td>
-                <td id="peek" data-toggle="modal" data-target="#myModal_<%= team.id %>"><%= rand(1..100) %></td>
-                <td><%= rand(1..100) %></td>
-                <td><%= rand(1..100) %></td>
-                <td><%= rand(1..100) %></td>
-                <td><%= rand(1..100) %></td>
+                <td><%= score.overall_place %></td>
+                <td><%= score.overall_score %></td>
+                <td><%= score.team.team_name %></td>
+                <td id="peek" data-toggle="modal" data-target="#myModal_<%= score.team_id %>"><%= score.wod1_place %></td>
+                <td><%= score.wod2_place %></td>
+                <td><%= score.wod3_place %></td>
+                <td><%= score.wod4_place %></td>
+                <td><%= score.wod5_place %></td>
             </tr>
-            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal_<%= team.id %>">
+            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal_<%= score.id %>">
               <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title"><%= team.team_name %></h4>
+                    <h4 class="modal-title"><%= score.team.team_name %></h4>
                   </div>
                   <div class="modal-body">
-                    <p>Score for WOD 1 was <%= team.team_name %> place.</p>
+                    <p>Score for WOD 1 was <%= score.wod1_score %> points.</p>
                     <p>Points: 1000</p>
                   </div>
                 </div>
