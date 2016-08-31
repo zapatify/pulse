@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :scores
   get 'sample/scores'
+   
+  get 'setup' => 'setup#main'
 
   root 'scoreboard#main'
 

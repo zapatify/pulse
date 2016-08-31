@@ -1,4 +1,8 @@
 class SetupController < ApplicationController
+  def main
+  	@divisions = Division.all
+  end
+
   def teams
 
   end
